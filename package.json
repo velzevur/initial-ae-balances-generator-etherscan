@@ -1,0 +1,17 @@
+{
+  "name": "initial-ae-balances-generator-etherscan",
+  "version": "1.0.0",
+  "description": "initial ae balances generator for etherscan.io api",
+  "main": "initial-balances-generator-etherscan.js",
+  "scripts": {
+		"start": "node initial-balances-generator-etherscan.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nikita Fuchs & Philipp Klein",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "minimist": "^1.2.0",
+    "web3": "^1.0.0-beta.36"
+  }
+}

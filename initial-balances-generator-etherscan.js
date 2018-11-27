@@ -96,7 +96,7 @@ var end = start + pageSize;
 			json[address] = e.value
 		}
 	})
-	let jsonString = JSON.stringify(json, null, 2)
+  let jsonString = JSON.stringify(json, Object.keys(json).sort(), 2)
 	jsonString = jsonString.replace(/: "/gm, ': ')
 	jsonString = jsonString.replace(/",$/gm, ',')
 	jsonString = jsonString.replace(/"$/gm, '')

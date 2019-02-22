@@ -5,10 +5,11 @@ const axios = require('axios')
 const fs = require('fs')
 const args = require('minimist')(process.argv.slice(2));
 
-const url1 = 'https://etherscan.io/tx/0xb9aa18432655e78cda82320d419f4a0ef67863855a314fb766eb2ddbdda96dc9';
-const url2 = 'https://etherscan.io/tx/0x6dd35f57ac61436c9ee7ebc2cd0be830506965aca072eb23dc0e4e4b6456cbfb';
-const fromBlock = 6682073;
-const toBlock   = 6772802
+const url1 = 'https://etherscan.io/tx/0x6dd35f57ac61436c9ee7ebc2cd0be830506965aca072eb23dc0e4e4b6456cbfb';
+const url2 = 'https://etherscan.io/tx/0xed2415a9e8026e042c58e701bfbe218f858ad71bfa9796c9b8936b8faae83155';
+
+const fromBlock = 6772802;
+const toBlock   = 7225342 
 
 const apiKey = args.k;
 
@@ -19,11 +20,11 @@ if (apiKey  == null) {
 	process.exit(1);
 }
 console.log(
-	`Getting Logs for phase 0 from block ${fromBlock} to ${toBlock}`,
+	`Getting Logs for phase 1 from block ${fromBlock} to ${toBlock}`,
 	`\nCheck the following urls for 'from' and 'to' block:`,
-	`\n deployment of token migration contract`,
+	`\n end of phase 0`,
 	`\n\t ${url1}`,
-	`\n\n end of token migration phase 0:`,
+	`\n\n end of token migration phase 1:`,
 	`\n\t${url2}\n`
 )
 
@@ -63,7 +64,7 @@ var pageSize = Math.floor((toBlock - fromBlock) / 4);
 var end = start + pageSize;
 (async function() {
 	let collected = []
-	while(end < toBlock) {
+	while(end <= toBlock) {
 		console.log(`Getting Logs from block ${start} to ${end}. Please wait...`)
 		let url = `https://api.etherscan.io/api?module=logs&action=getLogs&fromBlock=${
 			start

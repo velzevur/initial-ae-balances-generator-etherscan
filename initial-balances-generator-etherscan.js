@@ -84,7 +84,7 @@ var end = start + pageSize;
 				[r.topics[1], r.topics[2]]
 			))
 		collected = collected.concat(results)
-		start = end
+		start = end + 1
 		end = start + pageSize
 	}
 	let json = {}

@@ -12,10 +12,16 @@ const args = require('minimist')(process.argv.slice(2));
 //const toBlock   = 6772802
 
 // Phase 1
-const url1 = 'https://etherscan.io/tx/0x6dd35f57ac61436c9ee7ebc2cd0be830506965aca072eb23dc0e4e4b6456cbfb';
-const url2 = 'https://etherscan.io/tx/0xed2415a9e8026e042c58e701bfbe218f858ad71bfa9796c9b8936b8faae83155';
-const fromBlock = 6772803; // included
-const toBlock   = 7225342 // included
+//const url1 = 'https://etherscan.io/tx/0x6dd35f57ac61436c9ee7ebc2cd0be830506965aca072eb23dc0e4e4b6456cbfb';
+//const url2 = 'https://etherscan.io/tx/0xed2415a9e8026e042c58e701bfbe218f858ad71bfa9796c9b8936b8faae83155';
+//const fromBlock = 6772803; // included
+//const toBlock   = 7225342 // included
+
+// Phase 2
+const url1 = 'https://etherscan.io/tx/unknown';
+const url2 = 'https://etherscan.io/tx/unknown';
+const fromBlock = 7225342; // included
+const toBlock   = 7761026; // included
 
 const apiKey = args.k;
 
@@ -26,11 +32,11 @@ if (apiKey  == null) {
 	process.exit(1);
 }
 console.log(
-	`Getting Logs for phase 1 from block ${fromBlock} to ${toBlock}`,
+	`Getting Logs for phase 2 from block ${fromBlock} to ${toBlock}`,
 	`\nCheck the following urls for 'from' and 'to' block:`,
-	`\n end of phase 0`,
+	`\n end of phase 1`,
 	`\n\t ${url1}`,
-	`\n\n end of token migration phase 1:`,
+	`\n\n end of token migration phase 2:`,
 	`\n\t${url2}\n`
 )
 

@@ -19,7 +19,7 @@ const args = require('minimist')(process.argv.slice(2));
 
 // Phase 2
 const url1 = 'https://etherscan.io/tx/0xed2415a9e8026e042c58e701bfbe218f858ad71bfa9796c9b8936b8faae83155';
-const url2 = 'https://etherscan.io/tx/unknown';
+const url2 = 'https://etherscan.io/tx/0xadb242fca69bf2679bf0860437d53562cdbec87ce0a17c771f69e80aa308ef8f';
 const fromBlock = 7225342; // included
 const toBlock   = 7761026; // included
 

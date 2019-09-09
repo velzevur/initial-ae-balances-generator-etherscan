@@ -23,6 +23,12 @@ const url2 = 'https://etherscan.io/tx/0xadb242fca69bf2679bf0860437d53562cdbec87c
 const fromBlock = 7225343; // included
 const toBlock   = 7761026; // included
 
+// Phase 3
+const url1 = 'https://etherscan.io/tx/0xadb242fca69bf2679bf0860437d53562cdbec87ce0a17c771f69e80aa308ef8f';
+const url2 = 'https://etherscan.io/tx/0xa3a9ec03f7521010b6e544813a25d2539dbdaac69a2bfa56bcc1ae91be570d12';
+const fromBlock = 7761026; // included
+const toBlock   = 8515749; // included
+
 const apiKey = args.k;
 
 if (apiKey  == null) {
@@ -32,11 +38,11 @@ if (apiKey  == null) {
 	process.exit(1);
 }
 console.log(
-	`Getting Logs for phase 2 from block ${fromBlock} to ${toBlock}`,
+	`Getting Logs for phase 3 from block ${fromBlock} to ${toBlock}`,
 	`\nCheck the following urls for 'from' and 'to' block:`,
-	`\n end of phase 1`,
+	`\n end of phase 2`,
 	`\n\t ${url1}`,
-	`\n\n end of token migration phase 2:`,
+	`\n\n end of token migration phase 3:`,
 	`\n\t${url2}\n`
 )
 
